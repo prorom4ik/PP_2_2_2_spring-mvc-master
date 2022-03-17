@@ -8,7 +8,7 @@ import java.util.List;
 @Service
 public class CarService {
 
-    private static List<Car> cars = new ArrayList<Car>() {{
+    private List<Car> cars = new ArrayList<Car>() {{
         add(new Car("S",5,"China"));
         add(new Car("A",4,"Russia"));
         add(new Car("C",2,"Japan"));
@@ -16,7 +16,7 @@ public class CarService {
         add(new Car("Z",6,"Ukraine"));
     }};
 
-    public static List<Car> getNCars(int number) {
+    public List<Car> getNCars(int number) {
         return cars.stream().limit(number).toList();
     }
 }
